@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col gap-5">
         <div class="w-64 relative">
-            <img :src="dessert.image.desktop" :alt="`${dessert.name} name illustration desktop`" :class="`w-full rounded-xl shadow-sm border-2 transition duration-200 ease-out ${carts[dessert.name] !== undefined ? 'border-red' : 'border-transparent'} hidden xl:block`">
-            <img :src="dessert.image.mobile" :alt="`${dessert.name} name illustration desktop`" :class="`w-full rounded-xl shadow-sm border-2 transition duration-200 ease-out ${carts[dessert.name] !== undefined ? 'border-red' : 'border-transparent'} block xl:hidden`">
+            <img :src="dessert.image.desktop" :alt="`${dessert.name} name illustration desktop`" :class="`w-full rounded-xl shadow-sm border-2 transition duration-200 ease-out ${carts[dessert.name] !== undefined ? 'border-red' : 'border-transparent'} hidden md:block`">
+            <img :src="dessert.image.mobile" :alt="`${dessert.name} name illustration desktop`" :class="`w-full rounded-xl shadow-sm border-2 transition duration-200 ease-out ${carts[dessert.name] !== undefined ? 'border-red' : 'border-transparent'} block md:hidden`">
             <div class="flex justify-center">
                 <div class="absolute -bottom-4">
                     <button v-if="carts[dessert.name] === undefined" @click="emits('item', dessert);" class="flex items-center gap-2 border border-pink-400 rounded-full bg-white px-6 py-3 text-sm transition duration-200 text-pink-900 hover:text-red hover:border-red shadow-lg">

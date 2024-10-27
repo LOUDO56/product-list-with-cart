@@ -20,12 +20,22 @@ export default {
         }
       },
       animation: {
-        'modal-appear': 'modalAppear 200ms ease'
+        'modal-appear-mobile': 'modalAppearMobile 200ms ease',
+        'modal-appear-desktop': 'modalAppearDesktop 200ms ease',
+        'bg-appear': 'backgroundAppear 200ms ease',
       },
       keyframes: {
-        modalAppear: {
+        modalAppearMobile: {
           '0%': { transform: 'translateY(400px)' },
           '100%': { transform: 'translateY(0px)' }
+        },
+        modalAppearDesktop: {
+          '0%': { transform: 'translateY(-20px)', opacity: '0%' },
+          '100%': { transform: 'translateY(0px)', opacity: '100%' }
+        },
+        backgroundAppear: {
+          '0%': { opacity: '0%' },
+          '100%': { opacity: '100%' }
         }
       }
     },
